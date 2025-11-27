@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Changeur de couleurs</title>
+
+  <!-- Lien vers le CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Color Changer</h1>
+
+    <!-- boîte dont la couleur change -->
+    <div id="color-box" aria-live="polite" aria-label="Boîte de couleur"></div>
+
+    <!-- affichage du code couleur actuel -->
+    <div id="color-code" aria-hidden="true">#ffffff</div>
+
+    <!-- bouton pour changer la couleur -->
+    <button id="change-color-btn" type="button">Change Color</button>
+  </div>
+
+  <!-- Lien vers le JS (à la fin du body) -->
+  <script src="index.js"></script>
+</body>
+</html>

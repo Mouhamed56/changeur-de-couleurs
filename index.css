@@ -1,0 +1,78 @@
+/* styles.css - style pour le changeur de couleurs */
+:root{
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --muted: #6b7280;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html,body{
+  height: 100%;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg), #eef2f8);
+  color: #0b1220;
+}
+
+.container{
+  max-width: 720px;
+  margin: 6vh auto;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+  text-align: center;
+}
+
+/* Titre */
+.container h1{
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+/* La boîte colorée */
+#color-box{
+  width: 320px;
+  height: 180px;
+  margin: 0 auto 12px;
+  border-radius: 10px;
+  background: #ffffff; /* couleur par défaut */
+  border: 1px solid #e6e9ef;
+  transition: background-color 360ms ease, transform 160ms ease;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+}
+
+/* Affiche le code couleur */
+#color-code{
+  margin-bottom: 14px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.6px;
+}
+
+/* Bouton */
+#change-color-btn{
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37,99,235,0.12);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s;
+}
+
+#change-color-btn:active{ transform: translateY(1px) scale(.998); }
+#change-color-btn:focus{
+  outline: none;
+  box-shadow: 0 0 0 6px rgba(37,99,235,0.12);
+}
+
+/* Responsive */
+@media (max-width: 420px){
+  #color-box { width: 90%; height: 150px; }
+  .container { padding: 18px; margin: 4vh 12px; }
+}
